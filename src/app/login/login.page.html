@@ -1,0 +1,262 @@
+<ion-content>
+  <!-- ******** HUB ******** -->
+  <div class="content" *ngIf="step == 0">
+    <!-- CONTAINER -->
+    <div style="text-align: center">
+      <img src="assets/logo.png" class="logo">
+      <img src="assets/ilustracao.svg" class="ilustracao">
+
+      <div class="btnActionRoxo" (click)="step = 3">
+        criar conta
+      </div>
+      <p class="grayText">Já tem conta?</p>
+      <div class="btnActionRoxoOutline" (click)="step = 2">
+        entrar
+      </div>
+
+      <img src="assets/acompanhar.png" style="width: 90%; margin-top: 60px;" (click)="step = 1">
+    </div>
+  </div>
+
+  <!-- ******** ACOMPANHAMENTO ******** -->
+  <div class="contentWHeader" *ngIf="step == 1">
+    <!-- HEADER -->
+    <div class="header">
+      <ion-row>
+        <ion-col size="3" (click)="step = 0">
+          <img src="assets/left-arrow.png" class="backbutton">
+        </ion-col>
+        <ion-col size="9">
+          <p class="txtVoltar" style="color: #fff">Voltar</p>
+        </ion-col>
+
+      </ion-row>
+    </div>
+
+    <!-- CONTAINER -->
+    <div style="text-align: center">
+      <p class="txtHeader">
+        Acompanhe<br>seu pedido
+      </p>
+
+      <p class="grayText2">
+        Insira o código de<br>
+        rastreamento para encontrar<br>
+        seu pedido
+      </p>
+
+      <ion-input placeholder="Digite ou cole o código" class="inp" [(ngModel)]="codigo"></ion-input>
+      <div class="btnActionRoxo" (click)="rastrear()">
+        acompanhar pedido
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ******** ENTRAR ******** -->
+  <div class="contentWHeader" *ngIf="step == 2">
+    <!-- HEADER -->
+    <div class="headerW">
+      <ion-row>
+        <ion-col size="3" (click)="step = 0">
+          <img src="assets/left-arrow-roxo.png" class="backbutton">
+        </ion-col>
+        <ion-col size="9">
+          <p class="txtWelcome">Bem-vindo de volta,</p>
+          <p class="txtWelcomeSub">Preencha para continuar</p>
+        </ion-col>
+
+      </ion-row>
+    </div>
+
+    <!-- CONTAINER -->
+    <div style="text-align: left">
+      <img src="assets/girl.svg" class="boneco">
+
+      <ion-item style="margin-top: 30px;">
+        <ion-label position="stacked">e-mail</ion-label>
+        <ion-input class="inp2" type="email" placeholder="seuemail@dominio.com.br" [(ngModel)]="cadastro.email"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin-top: 20px;">
+        <ion-label position="stacked">senha</ion-label>
+        <ion-input class="inp2" type="password" placeholder="●●●●●●" [(ngModel)]="cadastro.senha"></ion-input>
+      </ion-item>
+
+      <div class="btnActionRoxo" (click)="login1()">
+        próximo
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ******** VALIDAR SMS ******** -->
+  <div class="contentWHeader" *ngIf="step == 2.1">
+    <!-- HEADER -->
+    <div class="headerW">
+      <ion-row>
+        <ion-col size="3" (click)="step = 2">
+          <img src="assets/left-arrow-roxo.png" class="backbutton">
+        </ion-col>
+        <ion-col size="9">
+          <p class="txtWelcome">Bem-vindo de volta,</p>
+          <p class="txtWelcomeSub">Preencha para continuar</p>
+        </ion-col>
+
+      </ion-row>
+    </div>
+
+    <!-- CONTAINER -->
+    <div style="text-align: left">
+      <img src="assets/girl.svg" class="boneco">
+
+      <ion-item style="margin-top: 30px;">
+        <ion-label position="stacked">digite o código SMS</ion-label>
+        <ion-input class="inp2" type="tel" placeholder="00000"></ion-input>
+      </ion-item>
+
+
+      <div class="btnActionRoxo" (click)="login2()">
+        entrar
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ******** CADASTRAR ******** -->
+  <div class="content" *ngIf="step == 3">
+    <!-- CONTAINER -->
+    <div style="text-align: left">
+      <img src="assets/girl.svg" class="boneco" style="width: 30%;">
+      <p class="fazerlogin" (click)="step = 2">fazer login</p>
+
+      <p class="txtHeader">
+        Selecione uma<br>das opções
+      </p>
+
+
+      <div class="btnActionRoxoOutline" (click)="cadastro1('PJ')">
+        pessoa jurídica
+      </div>
+      <div class="btnActionRoxoOutline" (click)="cadastro1('PF')">
+        pessoa física
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contentWHeader" *ngIf="step == 3.1">
+    <!-- HEADER -->
+    <div class="headerW">
+      <ion-row>
+        <ion-col size="3" (click)="step = 3">
+          <img src="assets/left-arrow-roxo.png" class="backbutton">
+        </ion-col>
+        <ion-col size="9">
+          <p class="txtWelcome" style="font-size: 32px !important;">Crie sua<br>conta</p>
+        </ion-col>
+
+      </ion-row>
+    </div>
+
+    <!-- CONTAINER -->
+    <div style="text-align: left">
+
+      <ion-item style="margin-top: 30px;">
+        <ion-label position="stacked">nome</ion-label>
+        <ion-input class="inp2" type="text" placeholder="como você se chama?" [(ngModel)]="cadastro.nome"></ion-input>
+      </ion-item>
+
+
+      <ion-item style="margin-top: 20px;">
+        <ion-label position="stacked">e-mail</ion-label>
+        <ion-input class="inp2" type="email" placeholder="seu melhor e-mail" [(ngModel)]="cadastro.email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item style="margin-top: 20px;">
+        <ion-label position="stacked">celular</ion-label>
+        <ion-input class="inp2" type="tel" placeholder="(00) 99999-9999" [(ngModel)]="cadastro.celular"></ion-input>
+      </ion-item>
+
+
+      <ion-item style="margin-top: 20px;">
+        <ion-label position="stacked">senha</ion-label>
+        <ion-input class="inp2" type="password" placeholder="●●●●●●" [(ngModel)]="cadastro.senha"></ion-input>
+      </ion-item>
+
+      <div class="btnActionRoxo" (click)="cadastro2()">
+        próximo
+      </div>
+
+      <p class="haveAccount" (click)="step = 2">Já tenho uma conta</p>
+
+    </div>
+  </div>
+
+  <div class="contentWHeader" *ngIf="step == 3.2">
+    <!-- HEADER -->
+    <div class="headerW">
+      <ion-row>
+        <ion-col size="3" (click)="step = 3.1">
+          <img src="assets/left-arrow-roxo.png" class="backbutton">
+        </ion-col>
+        <ion-col size="9">
+          <p class="txtWelcome" style="font-size: 32px !important;">Crie sua<br>conta</p>
+        </ion-col>
+
+      </ion-row>
+    </div>
+
+    <!-- CONTAINER -->
+    <div style="text-align: left">
+
+      <ion-item style="margin-top: 30px;">
+        <ion-label position="stacked">digite o código SMS</ion-label>
+        <ion-input class="inp2" type="tel" placeholder="00000"></ion-input>
+      </ion-item>
+
+
+      <div class="btnActionRoxo" (click)="cadastro3()">
+        próximo
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contentWHeader" *ngIf="step == 3.3">
+    <!-- HEADER -->
+    <div class="headerW">
+      <ion-row>
+        <ion-col size="3" (click)="step = 3.2">
+          <img src="assets/left-arrow-roxo.png" class="backbutton">
+        </ion-col>
+        <ion-col size="9">
+          <p class="txtWelcome" style="font-size: 32px !important;">Crie sua<br>conta</p>
+        </ion-col>
+
+      </ion-row>
+    </div>
+
+    <!-- CONTAINER -->
+    <div style="text-align: left">
+
+      <ion-item style="margin-top: 30px;" *ngIf="cadastro.tipo == 'PF'">
+        <ion-label position="stacked">informe seu CPF</ion-label>
+        <ion-input class="inp2" type="tel" placeholder="000.000.000-00" [(ngModel)]="cadastro.documento"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin-top: 30px;" *ngIf="cadastro.tipo == 'PJ'">
+        <ion-label position="stacked">informe seu CNPJ</ion-label>
+        <ion-input class="inp2" type="tel" placeholder="000.000.000-00" [(ngModel)]="cadastro.documento"></ion-input>
+      </ion-item>
+
+
+
+      <div class="btnActionRoxo" (click)="cadastro4()">
+        finalizar
+      </div>
+
+    </div>
+  </div>
+</ion-content>

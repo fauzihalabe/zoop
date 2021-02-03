@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBNVAHZTnl_bl4eTzHaczh9EwSocqJc8RY",
-    authDomain: "cardapio-digital-app.firebaseapp.com",
-    projectId: "cardapio-digital-app",
-    storageBucket: "cardapio-digital-app.appspot.com",
-    messagingSenderId: "783573552867",
-    appId: "1:783573552867:web:f4b590053280ebaac17fd6",
-    measurementId: "G-XQRKLY6YP8"
+    apiKey: "AIzaSyBsDaTCnOrWoH3HNnZOU4-CuwAZsG2fr7s",
+    authDomain: "zoop-log.firebaseapp.com",
+    projectId: "zoop-log",
+    storageBucket: "zoop-log.appspot.com",
+    messagingSenderId: "275349006481",
+    appId: "1:275349006481:web:b76d167c22b7b6da1cf730",
+    measurementId: "G-Q7NJ4CPY96"
   }
  };
 

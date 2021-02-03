@@ -1,0 +1,174 @@
+.content {
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 40px;
+}
+
+.contentWHeader {
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 40px;
+    padding-top: 140px;
+}
+
+.headerW {
+    background: #fff;
+    height: 200px;
+    border-radius: 0px 20px 20px 0px;
+    height: 100px;
+    border-radius: 0px 0px 25px 25px;
+    position: absolute;
+    top: 0;
+    z-index: 1000000;
+    width: 100%;
+    left: 0;
+}
+
+.header {
+    height: 200px;
+    border-radius: 0px 20px 20px 0px;
+    background: #732e87;
+    height: 100px;
+    border-radius: 0px 0px 25px 25px;
+    position: absolute;
+    top: 0;
+    z-index: 1000000;
+    width: 100%;
+    left: 0;
+}
+
+.logo {
+    width: 70%;
+    margin-top: -40px;
+}
+
+.ilustracao {
+    width: 85%;
+    margin-top: -30px;
+}
+
+.btnActionRoxo {
+    background: #732e87;
+    width: 100%;
+    padding: 15px;
+    border-radius: 100px;
+    margin-top: 40px;
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.grayText {
+    font-size: 20px;
+    color: #a7a7a7;
+    margin-top: 30px;
+}
+
+.btnActionRoxoOutline {
+    background: #fff;
+    border: 3px solid #732e87;
+    width: 100%;
+    padding: 15px;
+    border-radius: 100px;
+    margin-top: 25px;
+    color: #732e87;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.backbutton {
+    width: 45%;
+    margin: 50%;
+    transform: translateY(-50%);
+    margin-left: 30%;
+}
+
+.txtVoltar {
+    font-size: 22px;
+    margin-top: 10.5%;
+}
+
+.txtHeader {
+    color: #732e87;
+    font-size: 34px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.grayText2 {
+    font-size: 20px;
+    color: #a7a7a7;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.inp {
+    background: #fff;
+    border: 2px solid #732e87;
+    width: 100%;
+    padding: 5px 10px !important;
+    border-radius: 100px;
+    margin-top: 25px;
+    color: #732e87;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    --placeholder-color: #a7a7a7;
+    --placeholder-opacity: 0.5;
+}
+
+.txtWelcome {
+    color: #732e87;
+    font-weight: 800;
+    margin-top: 10.5%;
+    font-size: 26px;
+    margin-bottom: 0px;
+}
+
+.txtWelcomeSub {
+    color: #a7a7a7;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.boneco {
+    width: 22%;
+}
+
+ion-item {
+    --background: transparent !important;
+    --padding-start: 0px !important
+}
+
+ion-label {
+    color: #a7a7a7 !important;
+    font-size: 26px !important;
+    font-weight: 700;
+}
+
+.inp2 {
+    color: #732e87;
+    --placeholder-color: #a7a7a7;
+    --placeholder-opacity: 0.5;
+    font-size: 22px !important;
+    margin-top: 5px;
+}
+
+.fazerlogin {
+    color: #732e87;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    right: 40px;
+    top: 10px
+}
+
+.haveAccount {
+    font-size: 18px;
+    color: #732e87;
+    text-align: center;
+}
